@@ -34,7 +34,7 @@
 
 ## Infrastructure
 
-- [ ] T-005 infrastructure: `JwtTokenService` implementing `ITokenService` + cookie
+- [x] T-005 infrastructure: `JwtTokenService` implementing `ITokenService` + cookie
   helpers (set/clear `access_token` & `refresh_token`).
   - Files: `apps/api/src/modules/auth/infrastructure/token/jwt-token.service.ts`,
     `apps/api/src/modules/auth/infrastructure/http/cookie.helper.ts`
@@ -42,11 +42,11 @@
     persisted as SHA-256 hash.
   - Covers NFR (TTLs), security (cookie flags), AC8
 
-- [ ] T-006 infrastructure: Prisma repository implementations for the three repositories.
+- [x] T-006 infrastructure: Prisma repository implementations for the three repositories.
   - Files: `apps/api/src/modules/auth/infrastructure/persistence/prisma-*.repository.ts`
   - Covers AC3, AC4, AC8, AC9
 
-- [ ] T-007 infrastructure: `GoogleProvider` and `DiscordProvider` implementing
+- [x] T-007 infrastructure: `GoogleProvider` and `DiscordProvider` implementing
   `IOAuthProvider`, with signed single-use `state` generation/validation.
   - Files: `apps/api/src/modules/auth/infrastructure/providers/{google,discord}.provider.ts`,
     `apps/api/src/modules/auth/infrastructure/providers/state.ts`

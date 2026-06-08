@@ -13,14 +13,14 @@
     `OAuthAccount @@unique([provider, providerUserId])`, `RefreshToken.tokenHash @unique` + `revokedAt`.
   - Covers AC3, AC4 (constraints), AC8, AC9 (rotation/revocation storage)
 
-- [ ] T-002 domain: Value objects `Email` and `Provider`, plus shared types
+- [x] T-002 domain: Value objects `Email` and `Provider`, plus shared types
   `IOAuthProfile`, `ITokenPair`, `ICurrentUser`.
   - Files: `apps/api/src/modules/auth/domain/value-objects/{email,provider}.vo.ts`,
     `apps/api/src/modules/auth/domain/types/*.ts`
   - Notes: `Provider` accepts only `google | discord`; `IOAuthProfile` carries `emailVerified`.
   - Covers AC4 (verified-email), AC1, AC2 (provider constraint)
 
-- [ ] T-003 domain: Entities `User`, `OAuthAccount` and abstract repositories
+- [x] T-003 domain: Entities `User`, `OAuthAccount` and abstract repositories
   `UserRepository`, `OAuthAccountRepository`, `RefreshTokenRepository`.
   - Files: `apps/api/src/modules/auth/domain/entities/*.ts`,
     `apps/api/src/modules/auth/domain/repositories/*.ts`

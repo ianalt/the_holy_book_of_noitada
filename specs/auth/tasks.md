@@ -27,7 +27,7 @@
   - Notes: abstract classes only (Prisma impls land in T-006). No outward deps.
   - Covers AC3, AC4, AC8, AC9
 
-- [ ] T-004 domain: Ports `IOAuthProvider` (authorizeUrl/exchangeCode/fetchProfile) and
+- [x] T-004 domain: Ports `IOAuthProvider` (authorizeUrl/exchangeCode/fetchProfile) and
   `ITokenService` (issuePair/verifyAccess/verifyRefresh).
   - Files: `apps/api/src/modules/auth/domain/ports/*.ts`
   - Covers AC1, AC2, AC8

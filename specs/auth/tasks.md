@@ -6,7 +6,7 @@
 
 ## Database & domain foundations
 
-- [ ] T-001 db: Define `User`, `OAuthAccount`, `RefreshToken` models and generate the
+- [x] T-001 db: Define `User`, `OAuthAccount`, `RefreshToken` models and generate the
   initial migration.
   - Files: `apps/api/prisma/schema.prisma`, `apps/api/prisma/migrations/**`
   - Notes: `User.email @unique`, `User.role @default("member")`,

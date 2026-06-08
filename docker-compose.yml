@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: noitada-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: noitada
+      POSTGRES_PASSWORD: noitada
+      POSTGRES_DB: noitada
+    ports:
+      - "5432:5432"
+    volumes:
+      - noitada-pgdata:/var/lib/postgresql/data
+
+volumes:
+  noitada-pgdata:

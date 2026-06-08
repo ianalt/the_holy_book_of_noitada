@@ -1,0 +1,23 @@
+{
+  "name": "the-holy-book-of-noitada",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": ["apps/api", "apps/web"],
+  "scripts": {
+    "check": "biome check .",
+    "check:write": "biome check --write .",
+    "test": "vitest run",
+    "test:arch": "vitest run tests/architecture",
+    "test:acceptance": "vitest run tests/acceptance",
+    "db:generate": "prisma generate --schema apps/api/prisma/schema.prisma",
+    "db:migrate": "prisma migrate dev --schema apps/api/prisma/schema.prisma"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "dotenv": "16.4.7",
+    "prisma": "7.8.0",
+    "typescript": "5.6.3",
+    "vitest": "2.1.8"
+  }
+}

@@ -6,6 +6,11 @@
 > Greenfield: no existing `prisma/schema.prisma` or `apps/api` modules exist yet.
 > This design introduces the first bounded context, `modules/auth/`.
 
+> Stack note (Prisma 7): the datasource block holds only `provider`; the connection
+> URL lives in `apps/api/prisma.config.ts` (`datasource.url = env("DATABASE_URL")`).
+> At runtime `PrismaClient` is constructed with the `@prisma/adapter-pg` driver
+> adapter, wired in the infrastructure layer (T-005/T-006).
+
 ## Data model (Prisma)
 
 ```prisma

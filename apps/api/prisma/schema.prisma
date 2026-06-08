@@ -1,0 +1,43 @@
+// Auth bounded context — initial data model (task T-001).
+// Constraints here back the auth acceptance criteria; see specs/auth/design.md.
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  // Connection URL moved to prisma.config.ts (Prisma 7).
+}
+
+model User {
+  id        String         @id @default(cuid())
+  email     String         @unique // verified email; identity key for linking (AC4)
+  role      String         @default("member") // default role on first login (AC3)
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+  accounts  OAuthAccount[] // 1 User : N OAuthAccounts (AC4)
+  refreshTokens RefreshToken[]
+}
+
+model OAuthAccount {
+  id             String   @id @default(cuid())
+  provider       String // "google" | "discord"
+  providerUserId String // the provider's stable subject id
+  userId         String
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt      DateTime @default(now())
+
+  @@unique([provider, providerUserId]) // one account per provider identity (AC3/AC4)
+}
+
+model RefreshToken {
+  id        String    @id @default(cuid())
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tokenHash String    @unique // SHA-256 of the refresh JWT; raw token never stored
+  expiresAt DateTime // ~7 days (NFR)
+  revokedAt DateTime? // set on rotation/logout (AC8/AC9)
+  createdAt DateTime  @default(now())
+
+  @@index([userId])
+}

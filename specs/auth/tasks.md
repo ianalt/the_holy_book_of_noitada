@@ -78,7 +78,7 @@
 
 ## Presentation
 
-- [ ] T-012 presentation: `JwtAuthGuard` (reads `access_token` cookie) + `@CurrentUser`
+- [x] T-012 presentation: `JwtAuthGuard` (reads `access_token` cookie) + `@CurrentUser`
   decorator.
   - Files: `apps/api/src/modules/auth/presentation/guards/jwt-auth.guard.ts`,
     `apps/api/src/modules/auth/presentation/decorators/current-user.decorator.ts`

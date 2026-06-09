@@ -72,7 +72,7 @@
   - Files: `apps/api/src/modules/auth/application/refresh-session.usecase.ts`
   - Covers AC8
 
-- [ ] T-011 application: `Logout` use case — revoke refresh token row (idempotent).
+- [x] T-011 application: `Logout` use case — revoke refresh token row (idempotent).
   - Files: `apps/api/src/modules/auth/application/logout.usecase.ts`
   - Covers AC9
 

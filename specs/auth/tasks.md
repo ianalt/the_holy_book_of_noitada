@@ -55,19 +55,19 @@
 
 ## Application (use cases)
 
-- [ ] T-008 application: `StartOAuth` use case — build provider authorize URL with backend
+- [x] T-008 application: `StartOAuth` use case — build provider authorize URL with backend
   `redirect_uri` and issue the `state` cookie.
   - Files: `apps/api/src/modules/auth/application/start-oauth.usecase.ts`
   - Covers AC1, AC2
 
-- [ ] T-009 application: `HandleOAuthCallback` use case — validate `state`, exchange `code`,
+- [x] T-009 application: `HandleOAuthCallback` use case — validate `state`, exchange `code`,
   enforce verified email, resolve account (find-account → link-by-email → create), issue
   token pair.
   - Files: `apps/api/src/modules/auth/application/handle-oauth-callback.usecase.ts`
   - Notes: invalid `code`/`state`/unverified ⇒ domain auth error (no session).
   - Covers AC3, AC4, AC5
 
-- [ ] T-010 application: `RefreshSession` use case — verify refresh, revoke old token row,
+- [x] T-010 application: `RefreshSession` use case — verify refresh, revoke old token row,
   issue rotated pair.
   - Files: `apps/api/src/modules/auth/application/refresh-session.usecase.ts`
   - Covers AC8

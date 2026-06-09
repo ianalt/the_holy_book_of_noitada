@@ -101,11 +101,11 @@
   - Files: `apps/web/src/components/atoms/*`, `apps/web/src/components/molecules/o-auth-button.molecule.tsx`
   - Covers AC1, AC2
 
-- [ ] T-015 web: organism — `LoginPanel.organism.tsx` (two OAuth buttons + error slot).
+- [x] T-015 web: organism — `LoginPanel.organism.tsx` (two OAuth buttons + error slot).
   - Files: `apps/web/src/components/organisms/login-panel.organism.tsx`
   - Covers AC1, AC2, AC5
 
-- [ ] T-016 web: feature slice — TanStack routes `/login`, `/login-error`, protected-route
+- [x] T-016 web: feature slice — TanStack routes `/login`, `/login-error`, protected-route
   guard; queries `useSession()` (`GET /auth/me`) and `useLogout()` mutation.
   - Files: `apps/web/src/features/auth/**`
   - Notes: guard 401-redirects to `/login`; no token touched by JS.

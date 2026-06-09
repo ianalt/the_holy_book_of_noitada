@@ -96,7 +96,7 @@
 
 ## Frontend (Atomic Design)
 
-- [ ] T-014 web: atoms + molecule — `Button.atom.tsx`, `Spinner.atom.tsx`,
+- [x] T-014 web: atoms + molecule — `Button.atom.tsx`, `Spinner.atom.tsx`,
   `OAuthButton.molecule.tsx` (links to `/auth/:provider/start`).
   - Files: `apps/web/src/components/atoms/*`, `apps/web/src/components/molecules/o-auth-button.molecule.tsx`
   - Covers AC1, AC2

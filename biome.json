@@ -12,5 +12,8 @@
       "recommended": true
     }
   },
-  "javascript": { "formatter": { "quoteStyle": "double", "trailingCommas": "all" } }
+  "javascript": {
+    "formatter": { "quoteStyle": "double", "trailingCommas": "all" },
+    "parser": { "unsafeParameterDecoratorsEnabled": true }
+  }
 }

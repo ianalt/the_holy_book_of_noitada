@@ -84,7 +84,7 @@
     `apps/api/src/modules/auth/presentation/decorators/current-user.decorator.ts`
   - Covers AC6, AC7
 
-- [ ] T-013 presentation: `AuthController` wiring all routes + the auth Nest module
+- [x] T-013 presentation: `AuthController` wiring all routes + the auth Nest module
   (DI bindings of ports → impls).
   - Files: `apps/api/src/modules/auth/presentation/auth.controller.ts`,
     `apps/api/src/modules/auth/auth.module.ts`
